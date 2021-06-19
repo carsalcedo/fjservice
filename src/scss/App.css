@@ -1,0 +1,162 @@
+body {
+  background: #1FA2FF;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#A6FFCB), color-stop(#12D8FA), to(#1FA2FF));
+  background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#formu {
+  background: rgba(34, 66, 255, 0.3);
+  opacity: 0,5;
+  padding-top: 4%;
+  width: 500px;
+  height: 350px;
+  position: relative;
+  margin-top: 3%;
+}
+
+#formu label {
+  color: white;
+}
+
+#formu #btinicio {
+  margin-left: 40%;
+  background: #00a308;
+}
+
+#formu a {
+  color: white;
+}
+
+#formu p {
+  margin-left: 35%;
+}
+
+#formu2 {
+  background: rgba(34, 66, 255, 0.3);
+  opacity: 0,5;
+  padding-top: 4%;
+  width: 250px;
+  height: 200px;
+  position: fixed;
+  right: 30px;
+  top: 80px;
+  z-index: 1;
+  display: none;
+}
+
+#formu2 #btinicio {
+  margin-left: 20%;
+  background: #00a308;
+}
+
+#formu2 a {
+  color: white;
+}
+
+#formu2 p {
+  margin-left: 30%;
+}
+
+#perfil:hover #formu2 {
+  display: block;
+}
+
+#cesta {
+  width: 550px;
+  height: 300px;
+  position: fixed;
+  right: 26px;
+  top: 90px;
+  padding-top: 1%;
+  z-index: 1;
+  /*display: none;*/
+  background: -webkit-gradient(linear, left top, right top, from(#dce35b), to(#45b649));
+  background: linear-gradient(to right, #dce35b, #45b649);
+  opacity: 0,5;
+  overflow-y: scroll;
+}
+
+/* #carrito:hover #cesta{
+    display: block;
+}*/
+#switch {
+  background: #04047e;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+#switch::after {
+  display: block;
+  position: absolute;
+  background: white;
+  width: 25px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: 3s ease all;
+  transition: 3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px #0e0404;
+          box-shadow: 0px 0px 2px 2px #0e0404;
+}
+
+#switch span {
+  display: block;
+  background: none;
+  width: 25px;
+  height: 30px;
+  line-height: 20px;
+  color: white;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card .card-img-top:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.nav-link:hover {
+  background: #00a308;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.nav-item:hover ul {
+  display: block;
+}
+
+.nav-item li:hover {
+  background: #00a308;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.dropdown-item:hover {
+  background: #00a308;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+h1 {
+  color: blue;
+}
+
+#botonUP {
+  z-index: 5;
+  opacity: 0,5;
+}
+/*# sourceMappingURL=App.css.map */
