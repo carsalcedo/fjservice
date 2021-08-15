@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 
 const Carrito = (props) => {
-  const { artis, addproducto, onRemove } = props;
+  const { artis, addproducto, onRemove, pagar } = props;
   const itemsPrice = artis.reduce((a, c) => a + c.qty * c.precio, 0);
   const totalItems = artis.reduce((a, c) => a + c.qty, 0);
 
@@ -49,7 +49,7 @@ const Carrito = (props) => {
                   <>
                   <th scope="row" colspan="2">Total items: {totalItems} </th>
                   <th scope="row" colspan="3">Total Pagar: ${itemsPrice} </th>
-                  <th><button className="btn btn-primary btn-sm" onClick={() => alert('Gracias por su compra')}>
+                  <th><button className="btn btn-primary btn-sm" onClick={() => pagar()}>
                         PAGAR
                     </button> </th>
                     </>)}

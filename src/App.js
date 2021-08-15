@@ -74,16 +74,22 @@ const onRemove = (arti) => {
   }
 };
 
-const desloguear = () =>{
-   
+const desloguear = () =>{   
   if(user){
     auth.signOut();
+    setArtis([]);
     dispatch({
       type: actionTypes.SET_USER,
       user: null,
     });
+    
   }
 };
+
+const pagar = () =>{
+  alert('Gracias por su compra')
+  setArtis([]);
+}
 
 const searchHandler = (searchTerm) => {
   setSearchTerm(searchTerm);
@@ -106,7 +112,7 @@ const searchHandler = (searchTerm) => {
       <div className='container-fluid' id="tope">
 
         <Cabecera artis={artis} addproducto={addproducto} onRemove={onRemove} desloguear={desloguear} term={searchTerm}
-                searchKeyword={searchHandler}/>
+                searchKeyword={searchHandler} pagar={pagar}/>
 
         <div className="row mt-2">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -151,7 +157,7 @@ const searchHandler = (searchTerm) => {
        <Sproduct productos={searchTerm.length < 1 ? [] : searchResults} addproducto={addproducto}/>
        </Route>
         <Route path='/carrito'>
-        <Carrito artis={artis} addproducto={addproducto} onRemove={onRemove}/>
+        <Carrito artis={artis} addproducto={addproducto} onRemove={onRemove} pagar={pagar}/>
        </Route>
        <Route path='/Isesion'>
        <Isesion/>

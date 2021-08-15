@@ -8,7 +8,7 @@ import {useHistory} from 'react-router-dom';
 
 const Cabecera = (props) => {
   const inputEl = useRef("");
-  const {artis, addproducto, onRemove, desloguear, term, searchKeyword} = props;
+  const {artis, addproducto, onRemove, desloguear, term, searchKeyword, pagar} = props;
   const totalItems = artis.reduce((a, c) => a + c.qty, 0);
   const [{user}, dispatch] = useStateValue();
   const history = useHistory(); 
@@ -80,7 +80,7 @@ const Cabecera = (props) => {
 
                   <div className="collapse" id="cesta">
                   <NavLink to='/carrito'><span className="d-flex justify-content-end">Ver en pantalla completa</span></NavLink>
-                    <Carrito artis={artis} addproducto={addproducto} onRemove={onRemove}/>
+                    <Carrito artis={artis} addproducto={addproducto} onRemove={onRemove} pagar={pagar}/>
                
                 </div>
               </nav>
