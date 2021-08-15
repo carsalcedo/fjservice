@@ -8,7 +8,7 @@ import Tarjetas from './Tarjetas'
 
 const Inicio = (props) => {
   const { productos, addproducto } = props;  
-    const flayers = productos.filter(arti => arti.id >=29 && arti.id <=34 )
+    const flayers = productos.filter(arti => arti.id >=29 && arti.id <=35 )
     return ( 
         <Fragment>
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
@@ -41,7 +41,7 @@ const Inicio = (props) => {
           </div>
 
           <div className='container-fluid'>
-            <h1 className="">Combo de Servicios</h1>
+            <h1 className="">Combo de Servicios Especiales</h1>
             <div class="row row-cols-1 row-cols-md-4 g-4">
             {flayers.map(arti => (
             <Tarjetas key={arti.id} arti={arti} addproducto={addproducto} 

@@ -32,6 +32,7 @@ import flayer3 from './img/flayer3.jpg'
 import flayer4 from './img/flayer4.png'
 import fjweb from './img/FJweb.jpg'
 import gladyweb from './img/Galdysweb.jpg'
+import movieShonen from './img/MovieShonen.jpg'
 
 
 
@@ -71,6 +72,7 @@ const Inventario = {
         {id: 32, name: 'Tarjetas de presentación', precio: 10, urlimage: flayer4},
         {id: 33, name: 'E-commerce', precio: 400, urlimage: fjweb},
         {id: 34, name: 'E-commerce con pasarela de pago', precio: 600, urlimage: gladyweb},
+        {id: 35, name: 'Movie Web Site', precio: 500, urlimage: movieShonen},
          
 
     ],

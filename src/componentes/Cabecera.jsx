@@ -1,14 +1,26 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useRef} from 'react'
 import logofj from '../img/logofj.png'
 import {NavLink} from "react-router-dom";
 import {useStateValue} from '../StateProvider'
 import Carrito from './Carrito';
+import {useHistory} from 'react-router-dom';
 
 
 const Cabecera = (props) => {
-  const {artis, addproducto, onRemove, desloguear} = props;
+  const inputEl = useRef("");
+  const {artis, addproducto, onRemove, desloguear, term, searchKeyword} = props;
   const totalItems = artis.reduce((a, c) => a + c.qty, 0);
   const [{user}, dispatch] = useStateValue();
+  const history = useHistory(); 
+
+  const getSearchTerm = () => {
+    searchKeyword(inputEl.current.value);
+  };
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    history.push("/search"); 
+}
 
      return ( 
         <Fragment>   
@@ -22,8 +34,15 @@ const Cabecera = (props) => {
             
             <nav className="col-12 col-lg-8 navbar navbar-light">
                 <div className="container-fluid">
-                  <form className="d-flex justify-content-center w-100">
-                    <input className="form-control me-2" type="search" placeholder="buscar" aria-label="buscar"/>
+                  <form onSubmit={handleSubmit} className="d-flex justify-content-center w-100">
+                    <input ref={inputEl} 
+                    className="form-control me-2" 
+                    type="search" 
+                    placeholder="buscar" 
+                    aria-label="buscar" 
+                    value={term}
+                    onChange={getSearchTerm}
+                    />
                     <button className="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                       </svg></button>
@@ -59,7 +78,7 @@ const Cabecera = (props) => {
                     </div>
                   </div>
 
-                  <div class="collapse" id="cesta">
+                  <div className="collapse" id="cesta">
                   <NavLink to='/carrito'><span className="d-flex justify-content-end">Ver en pantalla completa</span></NavLink>
                     <Carrito artis={artis} addproducto={addproducto} onRemove={onRemove}/>
                

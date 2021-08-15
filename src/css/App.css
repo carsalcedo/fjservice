@@ -12,16 +12,15 @@ body {
   opacity: 0, 5;
   padding-top: 4%;
   width: 500px;
-  height: 400px;
+  height: 350px;
+  position: relative;
   margin-top: 3%;
-  /*margin-left: 30%;*/
- 
 }
 #formu label {
   color: white;
 }
 #formu #btinicio {
-  margin-left: 38%;
+  margin-left: 40%;
   background: #00a308;
 }
 #formu a {
@@ -41,7 +40,7 @@ body {
   right: 30px;
   top: 80px;
   z-index: 1;
-  
+  display: none;
 }
 #formu2 #btinicio {
   margin-left: 20%;
@@ -54,9 +53,9 @@ body {
   margin-left: 30%;
 }
 
-/*#perfil:hover #formu2 {
+#perfil:hover #formu2 {
   display: block;
-}*/
+}
 
 #cesta {
   width: 550px;
@@ -65,18 +64,17 @@ body {
   right: 26px;
   top: 90px;
   padding-top: 1%;
-  z-index: 2;
- /* display:none;*/
-  /*background: linear-gradient(to right, #dce35b, #45b649);*/
-  background: #22c22a;
+  z-index: 1;
+  /*display: none;*/
+  background: linear-gradient(to right, #dce35b, #45b649);
   opacity: 0, 5;
   overflow-y: scroll;
+  border-radius: 10px;
 }
 
- /*#carrito:hover #cesta{
+/* #carrito:hover #cesta{
     display: block;
- }*/
-
+}*/
 #switch {
   background: #04047e;
   border-radius: 1000px;
@@ -115,7 +113,7 @@ body {
   transition: all 1s ease-out;
 }
 
- .nav-link:hover {
+.nav-link:hover {
   background: #00a308;
   transition: all 1s ease-out;
 }
@@ -135,46 +133,12 @@ body {
 }
 
 h1 {
-  background-image: linear-gradient(to top, rgb(39, 83, 202), rgb(21, 240, 21));
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-align:left;
+  color: blue;
 }
 
 #botonUP {
   z-index: 5;
   opacity: 0, 5;
-}
-
-
-
-/* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 768px) { 
-  #logof {
-    -ms-flex-align: center;
-    justify-content: center;
-  }
-  #cesta {
-    width: 320px;
-    height: 300px;
-    position:unset;
-  }
-  #formu2 {
-    position:unset;
-  }
-  #formu{
-    width: 320px;
-  
-  }
-  #formu #btinicio{
-    margin-left: 36%;
-  }
-  #botones{
-    -ms-flex-align: center;
-    justify-content: center;
-  }
 }
 
 /*# sourceMappingURL=App.css.map */

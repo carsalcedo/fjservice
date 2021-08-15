@@ -13,6 +13,7 @@ import Soporte from './componentes/Soporte';
 import Diseños from './componentes/Diseños';
 import Computadoras from './componentes/Computadoras';
 import Accesorios from './componentes/Accesorios';
+import Sproduct from './componentes/Sproduct';
 import Pie from './componentes/Pie';
 import Formulario from './componentes/Formulario';
 import Inventario from './Inventario';
@@ -31,6 +32,8 @@ function App() {
    const {productos} = Inventario;
    const [artis, setArtis] = useState([]);
    const [{user}, dispatch] = useStateValue();
+   const [searchTerm, setSearchTerm] = useState("");
+   const [searchResults, setSearchResults] = useState([]);
 
    useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -82,12 +85,28 @@ const desloguear = () =>{
   }
 };
 
+const searchHandler = (searchTerm) => {
+  setSearchTerm(searchTerm);
+  if (searchTerm !== "") {
+    const newProductList = productos.filter((producto) => {
+      return Object.values(producto)
+        .join(" ")
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+    });
+    setSearchResults(newProductList);
+  } else {
+    setSearchResults(productos);
+  }
+};
+
   return (
     <Fragment>
       <Router>
       <div className='container-fluid' id="tope">
 
-        <Cabecera artis={artis} addproducto={addproducto} onRemove={onRemove} desloguear={desloguear}/>
+        <Cabecera artis={artis} addproducto={addproducto} onRemove={onRemove} desloguear={desloguear} term={searchTerm}
+                searchKeyword={searchHandler}/>
 
         <div className="row mt-2">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -126,6 +145,11 @@ const desloguear = () =>{
         </div>
 
         <Switch>
+
+       
+        <Route path='/search' exact>
+       <Sproduct productos={searchTerm.length < 1 ? [] : searchResults} addproducto={addproducto}/>
+       </Route>
         <Route path='/carrito'>
         <Carrito artis={artis} addproducto={addproducto} onRemove={onRemove}/>
        </Route>
@@ -148,7 +172,7 @@ const desloguear = () =>{
        <Soporte productos={productos} addproducto={addproducto}/>
        </Route>
        <Route path='/telefonos'>
-       <Telefonos productos={productos} addproducto={addproducto}/>
+       <Telefonos productos={productos}addproducto={addproducto}/>
        </Route>
        <Route path='/contactos'>
        <Contactos/>
