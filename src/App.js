@@ -8,11 +8,7 @@ import {
 import Cabecera from './componentes/Cabecera';
 import Inicio from './componentes/Inicio';
 import Contactos from './componentes/Contactos';
-import Telefonos from './componentes/Telefonos';
-import Soporte from './componentes/Soporte';
-import Diseños from './componentes/Diseños';
-import Computadoras from './componentes/Computadoras';
-import Accesorios from './componentes/Accesorios';
+import ProductPage from './componentes/ProductPage';
 import Sproduct from './componentes/Sproduct';
 import Pie from './componentes/Pie';
 import Formulario from './componentes/Formulario';
@@ -34,6 +30,12 @@ function App() {
    const [{user}, dispatch] = useStateValue();
    const [searchTerm, setSearchTerm] = useState("");
    const [searchResults, setSearchResults] = useState([]);
+
+   const diseño = productos.filter(arti => arti.id >=1 && arti.id <=8 );
+   const soport = productos.filter(arti => arti.id >=9 && arti.id <=12 );
+   const telef = productos.filter(arti => arti.id >=13 && arti.id <=20 );
+   const accesorio = productos.filter(arti => arti.id >=21 && arti.id <=24 );
+   const compus = productos.filter(arti => arti.id >=25 && arti.id <=28 );
 
    useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -166,19 +168,19 @@ const searchHandler = (searchTerm) => {
        <Formulario/>
        </Route>
        <Route path='/accesorios'>
-       <Accesorios productos={productos} addproducto={addproducto}/>
+       <ProductPage productos={accesorio} titleProduct='Accesorios' addproducto={addproducto}/>
        </Route>
        <Route path='/computadoras'>
-       <Computadoras productos={productos} addproducto={addproducto}/>
+       <ProductPage productos={compus} titleProduct='Computadoras' addproducto={addproducto}/>
        </Route>
        <Route path='/diseños'>
-       <Diseños productos={productos} addproducto={addproducto}/>
+       <ProductPage productos={diseño} titleProduct='Diseño Gráfico' addproducto={addproducto}/>
        </Route>
        <Route path='/soporte'>
-       <Soporte productos={productos} addproducto={addproducto}/>
+       <ProductPage productos={soport} titleProduct='Soporte Técnico' addproducto={addproducto}/>
        </Route>
        <Route path='/telefonos'>
-       <Telefonos productos={productos}addproducto={addproducto}/>
+       <ProductPage productos={telef} titleProduct='Celulares' addproducto={addproducto}/>
        </Route>
        <Route path='/contactos'>
        <Contactos/>

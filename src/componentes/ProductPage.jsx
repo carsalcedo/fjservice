@@ -2,16 +2,17 @@ import React, { Fragment } from 'react'
 import Tarjetas from './Tarjetas'
 
 
-const Computadoras = (props) => {
-    const { productos, addproducto } = props;  
-    const compus = productos.filter(arti => arti.id >=25 && arti.id <=28 )
 
+const ProductPage = (props) => {
+
+    const { productos, addproducto, titleProduct } = props;
+   
     return ( 
         <Fragment>
          <div className='container'>
-            <h1>Computadoras</h1>
+            <h1>{titleProduct}</h1>
             <div class="row row-cols-1 row-cols-md-4 g-4">
-            {compus.map(arti => (
+            {productos.map(arti => (
             <Tarjetas key={arti.id} arti={arti} addproducto={addproducto} 
              />))}
              </div>
@@ -22,5 +23,4 @@ const Computadoras = (props) => {
      );
 }
  
- 
-export default Computadoras;
+export default ProductPage;
