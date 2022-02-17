@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/fjservice/static/css/main.0c060562.chunk.css",
-    "main.js": "/fjservice/static/js/main.e4610297.chunk.js",
-    "main.js.map": "/fjservice/static/js/main.e4610297.chunk.js.map",
+    "main.css": "/fjservice/static/css/main.072e3ce4.chunk.css",
+    "main.js": "/fjservice/static/js/main.7a7c4c1f.chunk.js",
+    "main.js.map": "/fjservice/static/js/main.7a7c4c1f.chunk.js.map",
     "runtime-main.js": "/fjservice/static/js/runtime-main.991aac68.js",
     "runtime-main.js.map": "/fjservice/static/js/runtime-main.991aac68.js.map",
     "static/js/2.abc0dfe7.chunk.js": "/fjservice/static/js/2.abc0dfe7.chunk.js",
     "static/js/2.abc0dfe7.chunk.js.map": "/fjservice/static/js/2.abc0dfe7.chunk.js.map",
     "index.html": "/fjservice/index.html",
-    "static/css/main.0c060562.chunk.css.map": "/fjservice/static/css/main.0c060562.chunk.css.map",
+    "static/css/main.072e3ce4.chunk.css.map": "/fjservice/static/css/main.072e3ce4.chunk.css.map",
     "static/js/2.abc0dfe7.chunk.js.LICENSE.txt": "/fjservice/static/js/2.abc0dfe7.chunk.js.LICENSE.txt",
     "static/media/FJweb.5220261a.jpg": "/fjservice/static/media/FJweb.5220261a.jpg",
     "static/media/Galdysweb.0259cd23.jpg": "/fjservice/static/media/Galdysweb.0259cd23.jpg",
@@ -55,7 +55,7 @@
   "entrypoints": [
     "static/js/runtime-main.991aac68.js",
     "static/js/2.abc0dfe7.chunk.js",
-    "static/css/main.0c060562.chunk.css",
-    "static/js/main.e4610297.chunk.js"
+    "static/css/main.072e3ce4.chunk.css",
+    "static/js/main.7a7c4c1f.chunk.js"
   ]
 }
