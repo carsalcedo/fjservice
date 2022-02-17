@@ -10,46 +10,48 @@ body {
 #formu {
   background: rgba(34, 66, 255, 0.3);
   opacity: 0, 5;
-  padding-top: 4%;
-  width: 500px;
-  height: 350px;
+  padding: 5rem;
   position: relative;
   margin-top: 3%;
 }
-#formu label {
+#formu form {
+  margin: 2rem auto;
+  max-width: 30rem;
+}
+#formu form label {
   color: white;
 }
-#formu #btinicio {
-  margin-left: 40%;
+#formu form #btinicio {
   background: #00a308;
 }
-#formu a {
+#formu form a {
   color: white;
 }
-#formu p {
+#formu form p {
   margin-left: 35%;
 }
 
 #formu2 {
   background: rgba(34, 66, 255, 0.3);
   opacity: 0, 5;
-  padding-top: 4%;
-  width: 250px;
-  height: 200px;
+  padding: 5rem;
   position: fixed;
-  right: 30px;
   top: 80px;
   z-index: 1;
   display: none;
+  width: 50%;
 }
-#formu2 #btinicio {
-  margin-left: 20%;
+#formu2 form {
+  margin: 2rem auto;
+  max-width: 30rem;
+}
+#formu2 form #btinicio {
   background: #00a308;
 }
-#formu2 a {
+#formu2 form a {
   color: white;
 }
-#formu2 p {
+#formu2 form p {
   margin-left: 30%;
 }
 

@@ -57,7 +57,7 @@ const Formulario = () => {
                 <label className="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
 
-              <button id="btinicio" type="submit" className="btn btn-success" onClick={registrar}>Registrar</button>
+              <button id="btinicio" type="submit" className="btn btn-success  d-block mx-auto" onClick={registrar}>Registrar</button>
             </form>
       
         </div>

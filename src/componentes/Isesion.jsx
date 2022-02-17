@@ -44,8 +44,8 @@ const Isesion = () => {
                 <label className="form-check-label" for="exampleCheck1">Check me out</label>
               </div>
 
-              <button id="btinicio" type="submit" className="btn btn-success" onClick={logear}>Iniciar sesion</button>
-              <NavLink to='/formulario' className="nav-link"> <p className="mx-1" >Registrarse</p> </NavLink>
+              <button id="btinicio" type="submit" className="btn btn-success d-block mx-auto mb-2" onClick={logear}>Iniciar sesion</button>
+              <NavLink to='/formulario' className="text-center"> <p className="mx-auto" >Registrarse</p> </NavLink>
             </form>
                  
             

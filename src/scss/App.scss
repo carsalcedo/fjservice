@@ -9,24 +9,27 @@ body{
 #formu{
     background: rgba(34, 66, 255, 0.3);
     opacity: 0,5;
-    padding-top: 4%;
-    width: 500px;
-    height: 350px;
+    padding: 5rem;
     position: relative;
     margin-top: 3%;
-    label{
-        color: white;
-    }
-    #btinicio{
-        margin-left: 40%;
-        background: hsl(123, 100%, 32%);
-    }
-    a{
-        color: white;
-    }
-    p{
-        margin-left: 35%;
-    }
+
+    form{
+        margin: 2rem auto;
+        max-width: 30rem;
+        label{
+            color: white;
+        }
+        #btinicio{
+        // margin-left: 40%;
+            background: hsl(123, 100%, 32%);
+        }
+        a{
+            color: white;
+        }
+        p{
+            margin-left: 35%;
+        }
+  }
 }
 
 
@@ -34,23 +37,24 @@ body{
 #formu2{
     background: rgba(34, 66, 255, 0.3);
     opacity: 0,5;
-    padding-top: 4%;
-    width: 250px;
-    height: 200px;
+    padding: 5rem;
     position:fixed;
-    right: 30px;
     top: 80px;
     z-index: 1;
     display: none;
-    #btinicio{
-        margin-left: 20%;
-        background: hsl(123, 100%, 32%);
-    }
-    a{
-        color: white;
-    }
-    p{
-        margin-left: 30%;
+    width: 50%;
+    form{
+        margin: 2rem auto;
+        max-width: 30rem;
+        #btinicio{
+            background: hsl(123, 100%, 32%);
+        }
+        a{
+            color: white;
+        }
+        p{
+            margin-left: 30%;
+        }
     }
 }
 
