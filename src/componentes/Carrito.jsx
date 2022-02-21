@@ -9,6 +9,7 @@ const Carrito = (props) => {
 
     return ( 
         <Fragment>
+          <div className='mt-5 d-flex justify-content-center'>
             <div class="table-responsive-sm">
             <table className="table">
               <thead>
@@ -33,7 +34,7 @@ const Carrito = (props) => {
                     <td className="text-center"> {item.qty}</td>
                     <td>${item.qty*item.precio}</td>
                     <td>
-                        <button onClick={() => addproducto(item)} className="btn btn-info btn-sm">
+                        <button onClick={() => addproducto(item)} className="btn btn-success btn-sm">
                             +
                         </button>
                         <button onClick={() => onRemove(item)} className="btn btn-danger btn-sm">
@@ -58,6 +59,7 @@ const Carrito = (props) => {
               </tbody>
             
             </table>
+            </div>
             </div>
 
         </Fragment>
