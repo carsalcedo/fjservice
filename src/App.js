@@ -185,7 +185,7 @@ const searchHandler = (searchTerm) => {
        <Route path='/contactos'>
        <Contactos/>
        </Route>
-       <Route path='/' exact>
+       <Route path='/'>
        <Inicio productos={productos} addproducto={addproducto} />
        </Route>
      </Switch>
